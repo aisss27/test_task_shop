@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47aa261a-d302-40b2-b80b-ea51a4e70c33" name="Changes" comment="all components are done">
-      <change afterPath="$PROJECT_DIR$/src/components/Login/Login.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProductsList/ProductList.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProductsList/ProductList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ShoppingCart/ShoppingCart.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ShoppingCart/ShoppingCart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/cart-reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,12 +104,32 @@
       <workItem from="1708946401928" duration="2825000" />
       <workItem from="1709007815664" duration="686000" />
       <workItem from="1709008524805" duration="2768000" />
-      <workItem from="1709011464139" duration="4712000" />
+      <workItem from="1709011464139" duration="5088000" />
     </task>
+    <task id="LOCAL-00001" summary="all components are done">
+      <option name="closed" value="true" />
+      <created>1709016188526</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709016188526</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="all components are done" />
