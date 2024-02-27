@@ -10,6 +10,7 @@ export type Product = {
 export type RootState = {
     cart: Product[];
     products: Product[];
+    isAuthenticated: boolean;
 }
 
 export const addToCartAction = (product: Product) => ({
@@ -36,6 +37,7 @@ export type CartActionTypes = AddToCartActionType | RemoveFromCartActionType | S
 const initialState: RootState = {
     cart: [],
     products: [],
+    isAuthenticated: false
 };
 // Reducer
 export const cartReducer = (state: RootState = initialState, action: CartActionTypes): RootState => {
@@ -45,7 +47,7 @@ export const cartReducer = (state: RootState = initialState, action: CartActionT
         case 'REMOVE_FROM_CART':
             return {  ...state, cart: state.cart.filter((item) => item.id !== action.payload) };
         case 'SET_PRODUCTS':
-            return { ...state, products: action.payload };
+            return { ...state, products: action.payload, cart: state.cart };
         default:
             return state;
     }

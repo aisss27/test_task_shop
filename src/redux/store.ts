@@ -1,6 +1,16 @@
-import {applyMiddleware, legacy_createStore} from 'redux';
-import {cartReducer} from './cart-reducer';
-import {thunk} from 'redux-thunk';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import { cartReducer } from './cart-reducer';
+import { authReducer } from './auth-reducer';
+
+const rootReducer = combineReducers({
+    cart: cartReducer,
+    auth: authReducer,
+});
+
+export type RootState = ReturnType<typeof rootReducer>;
 
 
-export const store = legacy_createStore(cartReducer, applyMiddleware(thunk))
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
+
+export default store;

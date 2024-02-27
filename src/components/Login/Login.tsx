@@ -25,7 +25,7 @@ export const Login: React.FC<LoginProps> = ({ onLoginStatusChange }) => {
                 if (user) {
                     setError(null);
                     onLoginStatusChange(username);
-                    navigate('/products'); // Navigate to the '/products' route upon successful login
+                    navigate('/products');
                 } else {
                     setError('Invalid username or password');
                 }

@@ -1,27 +1,34 @@
 import React from 'react';
-import styles from './ShoppingCart.module.css'
-import {Product} from '../../redux/cart-reducer';
+import styles from './ShoppingCart.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeFromCartAction, Product } from '../../redux/cart-reducer';
+import {RootState} from '../../redux/store';
 
-export type ShoppingCartProps ={
-    cart: Product[]
+export const ShoppingCart: React.FC = () => {
+    const dispatch = useDispatch();
+    const cart = useSelector((state:RootState) => state.cart.cart);
 
-    removeFromCart: (productId: number) => void;
-}
-export const ShoppingCart: React.FC<ShoppingCartProps> = (props) => {
     const removeFromCart = (productId: number) => {
-            props.removeFromCart(productId)
+        dispatch(removeFromCartAction(productId));
+
     };
+
 
     return (
         <div className={styles.cart}>
             <h2 className={styles.cart_title}>Shopping Cart</h2>
             <div className={styles.cart_items}>
-                {props.cart.map(product => (
+                {cart.map((product: Product) => (
                     <div key={product.id} className={styles.cart_item}>
                         <img src={product.image} alt={product.title} className={styles.cart_item_image} />
                         <h3>{product.title}</h3>
                         <p>{product.price}$</p>
-                        <button className={styles.cart_item_button} onClick={() => removeFromCart(product.id)}>Remove from Cart</button>
+                        <button
+                            className={styles.cart_item_button}
+                            onClick={() => removeFromCart(product.id)}
+                        >
+                            Remove from Cart
+                        </button>
                     </div>
                 ))}
             </div>
