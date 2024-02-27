@@ -13,6 +13,7 @@ import {RootState} from './redux/store';
 function App() {
     const dispatch = useDispatch();
     const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
+    const cartItems = useSelector((state: RootState) => state.cart.cart.length);
 
     const handleLogin = () => {
         dispatch(loginAction());
@@ -32,7 +33,9 @@ function App() {
                 {isAuthenticated ? (
                     <>
                         <Link to="/products">PRODUCTS</Link>
-                        <Link to="/cart">CART</Link>
+                        <Link to="/cart">
+                            CART {cartItems > 0 && <span className="cart-label">{cartItems}</span>}
+                        </Link>
                         <span>Logged in</span>
                         <button onClick={handleLogout}>LOGOUT</button>
                     </>
@@ -59,6 +62,12 @@ function App() {
                 />
                 <Route path="/login" element={<Login onLoginStatusChange={handleLogin} />} />
             </Routes>
+            <footer>
+                <div className='footerContent'>
+                    <p>&copy; 2024 IStore. All rights reserved.</p>
+                    <p>Contact: abdykerovaisultan@gmail.com</p>
+                </div>
+            </footer>
         </div>
     );
 }
