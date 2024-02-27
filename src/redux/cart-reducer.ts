@@ -6,6 +6,7 @@ export type Product = {
     title: string;
     image: string;
     price: number;
+    category: string
 }
 export type RootState = {
     cart: Product[];
@@ -54,9 +55,12 @@ export const cartReducer = (state: RootState = initialState, action: CartActionT
 };
 
 
-export const fetchProducts = () => (dispatch: Dispatch<CartActionTypes>) => {
-    axios
-        .get<Product[]>('https://fakestoreapi.com/products')
+export const fetchProducts = (category?: string) => (dispatch: Dispatch<CartActionTypes>) => {
+    const apiUrl = category
+        ? `https://fakestoreapi.com/products/category/${category}`
+        : 'https://fakestoreapi.com/products';
+
+    axios.get<Product[]>(apiUrl)
         .then((response) => {
             dispatch(setProductsAction(response.data));
         })

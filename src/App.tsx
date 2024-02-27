@@ -42,7 +42,7 @@ function App() {
             </header>
             <Routes>
                 <Route
-                    path="/products"
+                    path="/products/:category?"
                     element={isAuthenticated ? (
                         <ProductList />
                     ) : (

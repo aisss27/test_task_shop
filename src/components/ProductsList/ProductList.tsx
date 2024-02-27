@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './ProductList.module.css';
 import { fetchProducts, Product, SetProductsActionType } from '../../redux/cart-reducer';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,6 +12,17 @@ export const ProductList: React.FC<ProductListProps> = () => {
     const dispatch = useDispatch<ThunkDispatch<RootState, null, SetProductsActionType | ReturnType<typeof addToCartAction>>>();
     const products = useSelector((state: RootState) => state.cart.products);
     const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+    const handleCategoryChange = (category: string) => {
+        setSelectedCategory(category === selectedCategory ? null : category);
+    };
+
+    const filteredProducts = selectedCategory
+        ? products.filter(product => product.category === selectedCategory)
+        : products;
+
+
 
     useEffect(() => {
         dispatch(fetchProducts());
@@ -23,11 +34,22 @@ export const ProductList: React.FC<ProductListProps> = () => {
         console.log('Item added to cart:', product)
     };
 
+
+
     return (
         <div className={styles.product}>
-            <h2 className={styles.product_list_heading}>Product List</h2>
+            <div className={styles.sidebar}>
+                <h2 className={styles.product_list_heading}>Product List</h2>
+                <div className={styles.category_menu}>
+                    <button onClick={() => handleCategoryChange('')}>All</button>
+                    <button onClick={() => handleCategoryChange('electronics')}>Electronics</button>
+                    <button onClick={() => handleCategoryChange('jewelery')}>Jewelery</button>
+                    <button onClick={() => handleCategoryChange('men\'s clothing')}>Men's</button>
+                    <button onClick={() => handleCategoryChange('women\'s clothing')}>Women's</button>
+                </div>
+            </div>
             <div className={styles.product_list}>
-                {products.map((product: Product) => (
+                {filteredProducts.map((product: Product) => (
                     <div key={product.id} className={styles.product_card}>
                         <img src={product.image} alt={product.title} className={styles.product_card_image} />
                         <h3>{product.title}</h3>
