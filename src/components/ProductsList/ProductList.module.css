@@ -92,3 +92,19 @@
 .product_card button:hover {
     background-color: #45a049;
 }
+
+@media only screen and (max-width: 768px) {
+.product{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 80px;
+}
+    .sidebar{
+       max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+}
