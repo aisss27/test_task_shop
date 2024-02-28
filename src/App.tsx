@@ -25,12 +25,12 @@ function App() {
 
     return (
         <div className="App">
-            <header>
-                <div>
-                    <img src={logo} alt="logo" />
-                    <p>IStore</p>
-                </div>
-                {isAuthenticated ? (
+            {isAuthenticated && (
+                <header>
+                    <div>
+                        <img src={logo} alt="logo" />
+                        <p>IStore</p>
+                    </div>
                     <>
                         <Link to="/products">PRODUCTS</Link>
                         <Link to="/cart">
@@ -39,17 +39,23 @@ function App() {
                         <span>Logged in</span>
                         <button onClick={handleLogout}>LOGOUT</button>
                     </>
-                ) : (
-                    <Link to="/login">LOGIN</Link>
-                )}
-            </header>
+                </header>
+            )}
             <Routes>
+                <Route
+                    path="/"
+                    element={!isAuthenticated ? (
+                        <Login onLoginStatusChange={handleLogin} />
+                    ) : (
+                        <Navigate to="/products" replace={true} />
+                    )}
+                />
                 <Route
                     path="/products/:category?"
                     element={isAuthenticated ? (
                         <ProductList />
                     ) : (
-                        <Navigate to="/login" replace />
+                        <Navigate to="/" />
                     )}
                 />
                 <Route
@@ -57,17 +63,18 @@ function App() {
                     element={isAuthenticated ? (
                         <ShoppingCart />
                     ) : (
-                        <Navigate to="/login" replace />
+                        <Navigate to="/" />
                     )}
                 />
-                <Route path="/login" element={<Login onLoginStatusChange={handleLogin} />} />
             </Routes>
-            <footer>
-                <div className='footerContent'>
-                    <p>&copy; 2024 IStore. All rights reserved.</p>
-                    <p>Contact: abdykerovaisultan@gmail.com</p>
-                </div>
-            </footer>
+            {isAuthenticated && (
+                <footer>
+                    <div className='footerContent'>
+                        <p>&copy; 2024 IStore. All rights reserved.</p>
+                        <p>Contact: abdykerovaisultan@gmail.com</p>
+                    </div>
+                </footer>
+            )}
         </div>
     );
 }

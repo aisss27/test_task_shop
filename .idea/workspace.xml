@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47aa261a-d302-40b2-b80b-ea51a4e70c33" name="Changes" comment="all components are done">
-      <change afterPath="$PROJECT_DIR$/src/redux/auth-reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store.png" afterDir="false" />
+    <list default="true" id="47aa261a-d302-40b2-b80b-ea51a4e70c33" name="Changes" comment="working on styles, final version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductsList/ProductList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductsList/ProductList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ShoppingCart/ShoppingCart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ShoppingCart/ShoppingCart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/cart-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/cart-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +127,8 @@
       <workItem from="1709021509840" duration="497000" />
       <workItem from="1709022049169" duration="627000" />
       <workItem from="1709022680831" duration="199000" />
-      <workItem from="1709022914455" duration="3288000" />
+      <workItem from="1709022914455" duration="6313000" />
+      <workItem from="1709031250838" duration="1356000" />
     </task>
     <task id="LOCAL-00001" summary="all components are done">
       <option name="closed" value="true" />
@@ -155,7 +146,39 @@
       <option name="project" value="LOCAL" />
       <updated>1709016718899</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="connected redux">
+      <option name="closed" value="true" />
+      <created>1709026359000</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709026359000</updated>
+    </task>
+    <task id="LOCAL-00004" summary="categories">
+      <option name="closed" value="true" />
+      <created>1709029651852</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709029651852</updated>
+    </task>
+    <task id="LOCAL-00005" summary="little changes - label for number items and added footer">
+      <option name="closed" value="true" />
+      <created>1709030069546</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709030069546</updated>
+    </task>
+    <task id="LOCAL-00006" summary="working on styles, final version">
+      <option name="closed" value="true" />
+      <created>1709030643897</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709030643897</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +197,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="all components are done" />
-    <option name="LAST_COMMIT_MESSAGE" value="all components are done" />
+    <MESSAGE value="connected redux" />
+    <MESSAGE value="categories" />
+    <MESSAGE value="little changes - label for number items and added footer" />
+    <MESSAGE value="working on styles, final version" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on styles, final version" />
   </component>
 </project>
