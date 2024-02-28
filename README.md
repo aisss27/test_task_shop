@@ -1,4 +1,4 @@
-Можно скачать архивом или git clone 
+Можно скачать архивом или git clone https://github.com/aisss27/test_task_shop.git
 
 1) `yarn` - Установить зависимости 
 
