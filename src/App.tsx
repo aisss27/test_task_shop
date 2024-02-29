@@ -32,8 +32,8 @@ function App() {
                         <p>IStore</p>
                     </div>
                     <>
-                        <Link to="/products">PRODUCTS</Link>
-                        <Link to="/cart">
+                        <Link to="/test_task_shop/products">PRODUCTS</Link>
+                        <Link to="/test_task_shop/cart">
                             CART {cartItems > 0 && <span className="cart-label">{cartItems}</span>}
                         </Link>
                         <span>Logged in</span>
@@ -43,19 +43,19 @@ function App() {
             )}
             <Routes>
                 <Route
-                    path="/"
+                    path="/test_task_shop"
                     element={!isAuthenticated ? (
                         <Login onLoginStatusChange={handleLogin} />
                     ) : (
-                        <Navigate to="/products" replace={true} />
+                        <Navigate to="/test_task_shop/products" replace={true} />
                     )}
                 />
                 <Route
-                    path="/products/:category?"
+                    path="/test_task_shop/products/:category?"
                     element={isAuthenticated ? (
                         <ProductList />
                     ) : (
-                        <Navigate to="/" />
+                        <Navigate to="/test_task_shop" />
                     )}
                 />
                 <Route
@@ -63,7 +63,7 @@ function App() {
                     element={isAuthenticated ? (
                         <ShoppingCart />
                     ) : (
-                        <Navigate to="/" />
+                        <Navigate to="/test_task_shop" />
                     )}
                 />
             </Routes>
