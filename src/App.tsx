@@ -59,7 +59,7 @@ function App() {
                     )}
                 />
                 <Route
-                    path="/cart"
+                    path="/test_task_shop/cart"
                     element={isAuthenticated ? (
                         <ShoppingCart />
                     ) : (
